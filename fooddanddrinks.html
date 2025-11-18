@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaPlex - Concessions Menu</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for aesthetic */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a; /* Dark background */
+        }
+        .nav-link.active {
+            color: #fca5a5;
+            border-bottom: 2px solid #fca5a5;
+        }
+        .menu-item-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .menu-item-card:hover {
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4); /* Red glow for food */
+        }
+        /* Mobile menu specific styles */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Global Navigation Header -->
+    <header class="bg-gray-900 shadow-xl sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0">
+                    <h1 class="text-3xl font-extrabold text-white">MEGA<span class="text-fuchsia-400">PLEX</span></h1>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="nav-link text-gray-300 hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="movies.html" class="nav-link text-gray-300 hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Movies</a>
+                        <a href="foodanddrinks.html" class="nav-link active text-white hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Concessions</a>
+                        <a href="findtheater.html" class="nav-link text-gray-300 hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Locations</a>
+                        <a href="aboutus.html" class="nav-link text-gray-300 hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+                        <a href="more.html" class="nav-link text-gray-300 hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">More</a>
+                        <a href="staff.html" class="nav-link text-gray-300 hover:text-fuchsia-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Staff</a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+                        <svg id="menu-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden absolute w-full bg-gray-900 shadow-lg hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="movies.html" class="block nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Movies</a>
+                <a href="foodanddrinks.html" class="block nav-link active text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">Concessions</a>
+                <a href="findtheater.html" class="block nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Locations</a>
+                <a href="aboutus.html" class="block nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="more.html" class="block nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">More</a>
+                <a href="staff.html" class="block nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Staff</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto p-4 sm:p-8 text-white">
+
+        <!-- Header -->
+        <header class="text-center mb-10 pt-4">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-3">THE SNACK <span class="text-fuchsia-400">COMMANDER</span></h1>
+            <p class="text-xl text-gray-400">Fresh popcorn, sweet treats, and refreshing drinks for your perfect movie marathon.</p>
+        </header>
+
+        <!-- Menu Sections -->
+
+        <!-- 1. Popcorn -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 border-l-4 border-fuchsia-500 pl-4">Popcorn Specials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="menu-item-card bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="text-2xl font-semibold text-red-300 mb-2">Classic MegaTub</h3>
+                    <p class="text-gray-400 mb-3">Our signature, freshly popped, butter-flavored popcorn. Perfect for sharing!</p>
+                    <p class="text-fuchsia-400 font-bold">Small | Medium | Large</p>
+                </div>
+                
+                <div class="menu-item-card bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="text-2xl font-semibold text-red-300 mb-2">Caramel Crunch Mix</h3>
+                    <p class="text-gray-400 mb-3">A delicious mix of sweet caramel popcorn and savory cheese-flavored pieces.</p>
+                    <p class="text-fuchsia-400 font-bold">Medium | Large</p>
+                </div>
+                
+                <div class="menu-item-card bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="text-2xl font-semibold text-red-300 mb-2">The Seasoning Bar</h3>
+                    <p class="text-gray-400 mb-3">Try our special powders: Ranch, White Cheddar, and Chili-Lime flavors.</p>
+                    <p class="text-fuchsia-400 font-bold">Free with any size popcorn</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. Candy & Sweets -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 border-l-4 border-fuchsia-500 pl-4">Candy & Treats</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="menu-item-card bg-gray-900 p-5 rounded-xl shadow-md">
+                    <h4 class="text-xl font-semibold text-fuchsia-300">Chewy Gummy Worms</h4>
+                    <p class="text-gray-500 text-sm">Classic sour and sweet mix.</p>
+                </div>
+                <div class="menu-item-card bg-gray-900 p-5 rounded-xl shadow-md">
+                    <h4 class="text-xl font-semibold text-fuchsia-300">Chocolate Clusters</h4>
+                    <p class="text-gray-500 text-sm">Rich, melt-in-your-mouth milk chocolate bites.</p>
+                </div>
+                <div class="menu-item-card bg-gray-900 p-5 rounded-xl shadow-md">
+                    <h4 class="text-xl font-semibold text-fuchsia-300">Rainbow Drops</h4>
+                    <p class="text-gray-500 text-sm">Crunchy, colorful, fruit-flavored shells.</p>
+                </div>
+                <div class="menu-item-card bg-gray-900 p-5 rounded-xl shadow-md">
+                    <h4 class="text-xl font-semibold text-fuchsia-300">Pretzel Bites</h4>
+                    <p class="text-gray-500 text-sm">Warm, salted pretzel bites with cheese dipping sauce.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Drinks -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 border-l-4 border-fuchsia-500 pl-4">Refreshing Drinks</h2>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                <p class="text-gray-300 text-lg mb-4">All standard fountain drinks available: Cola, Diet Cola, Lemon-Lime Soda, Orange Soda, and Root Beer. Ask about our specialty slushies!</p>
+                <ul class="space-y-2 text-fuchsia-300 font-medium">
+                    <li>- MegaSlush (Rotating Flavors)</li>
+                    <li>- Bottled Water & Juices</li>
+                    <li>- Hot Chocolate (Seasonal)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2024 MegaPlex Fictional Cinemas. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="aboutus.html" class="hover:text-fuchsia-400 transition-colors text-sm">About Us</a>
+                <span class="text-gray-600">|</span>
+                <a href="staff.html" class="hover:text-fuchsia-400 transition-colors text-sm">Careers</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Toggles the mobile navigation menu visibility.
+         */
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
