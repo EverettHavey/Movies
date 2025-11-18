@@ -25,10 +25,8 @@
         }
         .poster-placeholder {
             /* ENSURING UNIFORM SIZING: Responsive height and full width */
-            background-color: #3f3f46; /* Gray-600 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            /* We remove the background and center-text style since an image will fill it */
+            overflow: hidden; /* Ensure image doesn't bleed */
             height: 20rem; /* h-80, default for mobile/small screens */
         }
         /* Increased height for larger screens */
@@ -105,7 +103,9 @@
             <!-- Movie 1: Cosmic Drift -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-indigo-400">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Cosmic Drift Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Cosmic+Drift+Poster" 
+                         alt="Poster for Cosmic Drift" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Cosmic Drift</h3>
@@ -120,7 +120,9 @@
             <!-- Movie 2: The Silent Code -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-green-400">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Silent Code Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=The+Silent+Code+Poster" 
+                         alt="Poster for The Silent Code" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Silent Code</h3>
@@ -135,7 +137,9 @@
             <!-- Movie 3: Sunken Gold -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-yellow-500">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Sunken Gold Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Sunken+Gold+Poster" 
+                         alt="Poster for Sunken Gold" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Sunken Gold</h3>
@@ -150,7 +154,9 @@
             <!-- Movie 4: Echoes of Yesterday -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-red-400">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Echoes Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Echoes+of+Yesterday+Poster" 
+                         alt="Poster for Echoes of Yesterday" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Echoes of Yesterday</h3>
@@ -165,7 +171,9 @@
             <!-- Movie 5: The Gatekeepers -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-blue-600">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Gatekeepers Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=The+Gatekeepers+Poster" 
+                         alt="Poster for The Gatekeepers" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Gatekeepers</h3>
@@ -180,7 +188,9 @@
             <!-- Movie 6: Deep Sea Hunt -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-cyan-500">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Deep Sea Hunt Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Deep+Sea+Hunt+Poster" 
+                         alt="Poster for Deep Sea Hunt" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Deep Sea Hunt</h3>
@@ -195,7 +205,9 @@
             <!-- Movie 7: The Final Gambit -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-pink-700">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Final Gambit Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=The+Final+Gambit+Poster" 
+                         alt="Poster for The Final Gambit" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Final Gambit</h3>
@@ -210,7 +222,9 @@
             <!-- Movie 8: Silicon Dreams -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-fuchsia-500">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Silicon Dreams Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Silicon+Dreams+Poster" 
+                         alt="Poster for Silicon Dreams" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Silicon Dreams</h3>
@@ -225,7 +239,9 @@
             <!-- Movie 9: The Ghost Train -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-gray-500">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Ghost Train Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=The+Ghost+Train+Poster" 
+                         alt="Poster for The Ghost Train" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Ghost Train</h3>
@@ -240,7 +256,9 @@
             <!-- Movie 10: Battle for Sector 9 -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-amber-600">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Sector 9 Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Battle+for+Sector+9+Poster" 
+                         alt="Poster for Battle for Sector 9" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Battle for Sector 9</h3>
@@ -266,7 +284,9 @@
             <!-- Movie 11: A Roblox Movie (Requested - Consistent Sizing) -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-yellow-400 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">A Roblox Movie Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=A+Roblox+Movie+Poster" 
+                         alt="Poster for A Roblox Movie" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">A Roblox Movie</h3>
@@ -281,11 +301,13 @@
             <!-- Movie 12: The Lawyer (Requested - Consistent Sizing) -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-red-600 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">The Lawyer Poster</span>
+                    <img src="images/TLawyer.png" 
+                         alt="Poster for The Lawyer" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Lawyer</h3>
-                    <p class="text-fuchsia-400 text-sm mb-2">Crime, Thriller (R)</p>
+                    <p class="text-fuchsia-400 text-sm mb-2">Mystery, Adventure (PG)</p>
                     <p class="text-gray-400 text-xs mb-3">A brilliant but reckless defense attorney takes on an impossible case.</p>
                     <button class="w-full bg-gray-600 text-white font-semibold py-2 rounded-lg cursor-not-allowed">
                         Coming Soon
@@ -296,7 +318,9 @@
             <!-- Movie 13: The Last Lighthouse Keeper -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-zinc-400 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Lighthouse Keeper Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Lighthouse+Keeper+Poster" 
+                         alt="Poster for Lighthouse Keeper" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Lighthouse Keeper</h3>
@@ -311,7 +335,9 @@
             <!-- Movie 14: Time's Edge -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-purple-500 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Time's Edge Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Time's+Edge+Poster" 
+                         alt="Poster for Time's Edge" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Time's Edge</h3>
@@ -326,7 +352,9 @@
             <!-- Movie 15: The Golden Fleece -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-lime-500 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Golden Fleece Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=The+Golden+Fleece+Poster" 
+                         alt="Poster for The Golden Fleece" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Golden Fleece</h3>
@@ -341,7 +369,9 @@
             <!-- Movie 16: Terminal 5 -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-rose-800 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Terminal 5 Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=Terminal+5+Poster" 
+                         alt="Poster for Terminal 5" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">Terminal 5</h3>
@@ -356,7 +386,9 @@
             <!-- Movie 17: The Diplomat's Wife -->
             <div class="movie-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border-t-4 border-teal-500 opacity-75">
                 <div class="poster-placeholder rounded-t-lg">
-                    <span class="text-2xl font-bold text-gray-200 p-2 text-center">Diplomat's Wife Poster</span>
+                    <img src="https://placehold.co/400x600/3f3f46/ffffff?text=The+Diplomat's+Wife+Poster" 
+                         alt="Poster for The Diplomat's Wife" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-white truncate">The Diplomat's Wife</h3>
